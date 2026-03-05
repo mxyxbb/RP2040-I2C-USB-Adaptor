@@ -14,6 +14,8 @@ GP7 -- I2C1 SCL
 
 ## 功能
 
+https://github.com/mxyxbb/RP2040-I2C-USB-Adaptor/blob/main/Protocol/protocol.md
+
 0x01 / 0x81: 获取设备特征码 (Get Signature)
 
 0x02 / 0x82: 配置 I2C 波特率 (Set Baudrate)
