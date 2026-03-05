@@ -1,0 +1,40 @@
+﻿  list_ports_win.cc
+  win.cc
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4813,18): warning C4244: “=”: 从“const wchar_t”转换到“char”，可能丢失数据
+  (编译源文件“../../src/impl/win.cc”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4813,18):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\A04_others\source_code\cpp\ImGuiApps\MyAppHR\serial\src\impl\win.cc(369,16):
+          查看对正在编译的函数 模板 实例化“std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)”的引用
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+              D:\A04_others\source_code\cpp\ImGuiApps\MyAppHR\serial\src\impl\win.cc(369,3):
+              请参阅 "serial::Serial::SerialImpl::getPort" 中对 "std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string" 的第一个引用
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(812,17):
+          查看对正在编译的函数 模板 实例化“void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<const wchar_t*,const wchar_t*,_Size_type>(_Iter,const _Sent,_Size)”的引用
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=const wchar_t *,
+              _Sent=const wchar_t *,
+              _Size=unsigned __int64
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(968,18):
+          查看对正在编译的函数 模板 实例化“_OutIt *std::_Copy_n_unchecked4<const wchar_t*,_Size,char*>(_InIt,_SizeTy,_OutIt)”的引用
+          with
+          [
+              _OutIt=char *,
+              _Size=unsigned __int64,
+              _InIt=const wchar_t *,
+              _SizeTy=unsigned __int64
+          ]
+  
+  serial.cc
+D:\A04_others\source_code\cpp\ImGuiApps\MyAppHR\serial\src\serial.cc(140,32): warning C4101: “e”: 未引用的局部变量
+D:\A04_others\source_code\cpp\ImGuiApps\MyAppHR\serial\src\serial.cc(159,32): warning C4101: “e”: 未引用的局部变量
+  正在生成代码...
+  serial.vcxproj -> D:\A04_others\source_code\cpp\ImGuiApps\MyAppHR\serial\visual_studio\x64\Debug\serial.lib
