@@ -44,6 +44,13 @@ pico_set_program_version(pico_i2c_adaptor_user1 "0.1")
 pico_enable_stdio_uart(pico_i2c_adaptor_user1 0)
 pico_enable_stdio_usb(pico_i2c_adaptor_user1 1)
 
+target_compile_definitions(pico_i2c_adaptor_user1 PRIVATE
+    "USBD_VID=0x2E8A"
+    "USBD_PID=0x123a"
+    "USBD_MANUFACTURER=\"Personal\""
+    "USBD_PRODUCT=\"RP2040 I2C Adapter\""
+)
+
 # Add the standard library to the build
 target_link_libraries(pico_i2c_adaptor_user1
         pico_i2c_slave
@@ -56,4 +63,5 @@ target_include_directories(pico_i2c_adaptor_user1 PRIVATE
 )
 
 pico_add_extra_outputs(pico_i2c_adaptor_user1)
+
 
