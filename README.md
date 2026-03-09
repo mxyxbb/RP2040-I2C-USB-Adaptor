@@ -14,7 +14,7 @@ GP7 -- I2C1 SCL
 
 ## 功能
 
-https://github.com/mxyxbb/RP2040-I2C-USB-Adaptor/blob/main/Protocol/protocol.md
+<img width="1062" height="677" alt="image" src="https://github.com/user-attachments/assets/2f25e20e-fe6b-4e94-859a-9699a222b670" />
 
 0x01 / 0x81: 获取设备特征码 (Get Signature)
 
@@ -29,12 +29,10 @@ https://github.com/mxyxbb/RP2040-I2C-USB-Adaptor/blob/main/Protocol/protocol.md
 0x06 / 0x86: I2C 复合写读操作 (Write-Read)
 
 ## 附加功能
-I2C从机7bit地址：0x60
-
-GP4 -- I2C0 SDA
-
-GP5 -- I2C0 SCL
-
+I2C从机，用于基础通信测试  
+I2C从机7bit地址：0x60  
+GP4 -- I2C0 SDA  
+GP5 -- I2C0 SCL  
 The slave implements a 512 byte memory. To write a series of bytes, the master first
 writes the memory address, followed by the data. The address is automatically incremented
 for each byte transferred, looping back to 0 upon reaching the end. Reading is done
