@@ -37,6 +37,7 @@ The slave implements a 512 byte memory. To write a series of bytes, the master f
 writes the memory address, followed by the data. The address is automatically incremented
 for each byte transferred, looping back to 0 upon reaching the end. Reading is done
 sequentially from the current memory address.
+<img width="1070" height="678" alt="image" src="https://github.com/user-attachments/assets/250591e5-baef-48c6-be2b-77f6d61e753d" />
 
 ## 时序说明
 通过打包通信，将多帧指令放到一个数据包的方式，最快220us的间隔连续执行I2C读写  
