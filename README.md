@@ -39,10 +39,12 @@ for each byte transferred, looping back to 0 upon reaching the end. Reading is d
 sequentially from the current memory address.
 
 ## 时序说明
-最快220us的间隔连续执行I2C读写
-
-100kHz波特率设置下，T (clk high) = 4.5us，T (clk low) = 6.4us
+通过打包通信，将多帧指令放到一个数据包的方式，最快220us的间隔连续执行I2C读写  
+普通的通信方式单个usb数据包只发送一帧指令，比较浪费usb速率，这种方式的连续执行间隔约为15ms  
+100kHz波特率设置下，T (clk high) = 4.5us，T (clk low) = 6.4us  
 
 <img width="1225" height="410" alt="image" src="https://github.com/user-attachments/assets/8bae670a-dba9-457c-89a2-d668523d0138" />
-
+打包通信间隔示意图如下  
 <img width="1920" height="976" alt="image" src="https://github.com/user-attachments/assets/95a51bc6-ce05-4f5c-8aff-1231a3fee4f5" />
+单帧通信间隔示意图如下  
+<img width="935" height="581" alt="image" src="https://github.com/user-attachments/assets/e95993ac-19a2-4385-95db-f77ce672b064" />
